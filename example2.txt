@@ -1,0 +1,12 @@
+! 0 = \f.\x.x
+! SUCC = \n.\f.\x.n f (f x)
+! ADD = \m.\n.m SUCC n
+! MULT = \m.\n.m (ADD n) 0
+
+> MULT (SUCC (SUCC 0)) (SUCC (SUCC (SUCC 0)))
+
+# An alternative version of multiplication
+! MULTC = \m.\n.\x.m (n x)
+
+> MULTC (SUCC (SUCC 0)) (SUCC (SUCC (SUCC 0)))
+# In the trace for this line, notice that some of the x's need to be renamed
